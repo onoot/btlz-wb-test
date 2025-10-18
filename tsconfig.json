@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "strict": true,
+        "verbatimModuleSyntax": true,
         "module": "NodeNext",
         "target": "es2017",
         "esModuleInterop": true,

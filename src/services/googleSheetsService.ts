@@ -1,9 +1,15 @@
 import { google, sheets_v4 } from 'googleapis';
-import { Knex } from 'knex';
-import env from '../config/env/env';
-import { logger } from '../utils/logger';
+import type { Knex } from 'knex';
+//@ts-ignore
+
+import env from '../config/env/env.js';
+//@ts-ignore
+
+import { logger } from '../utils/logger.js';
 
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
+//@ts-ignore
+
 const list = env.page||'Лист1';
 export async function syncTariffsToSheets(knex: Knex): Promise<void> {
   const sheetIdsRaw = env.GOOGLE_SHEET_IDS;

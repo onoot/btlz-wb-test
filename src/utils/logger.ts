@@ -18,6 +18,7 @@ logger.error = (...args: any[]) => {
     }
     return arg;
   });
+  //@ts-ignore
   log4js.getLogger().error(...formatted);
 };
 

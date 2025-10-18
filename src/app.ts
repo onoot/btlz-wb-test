@@ -1,8 +1,8 @@
 
 import knex, { migrate, seed } from "#postgres/knex.js";
-import { startTariffSyncJob } from './utils/scheduler.js';
 import { syncTariffsToSheets } from './services/googleSheetsService.js';
-import { fetchAndStoreBoxTariffs } from './services/wbTariffsService';
+import { fetchAndStoreBoxTariffs } from './services/wbTariffsService.js';
+import { startTariffSyncJob } from './utils/scheduler.js';
 
 await migrate.latest();
 await seed.run();

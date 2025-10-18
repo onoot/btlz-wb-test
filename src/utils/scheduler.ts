@@ -1,6 +1,10 @@
 import { CronJob } from 'cron';
-import { fetchAndStoreBoxTariffs } from '../services/wbTariffsService';
-import env from '../config/env/env';
+  //@ts-ignore
+
+import { fetchAndStoreBoxTariffs } from '../services/wbTariffsService.js';
+  //@ts-ignore
+
+import env from '../config/env/env.js';
 import knex from "#postgres/knex.js";
 
 export const startTariffSyncJob = () => {
@@ -10,6 +14,8 @@ export const startTariffSyncJob = () => {
   }
 
   const job = new CronJob('0 * * * * *', async () => {
+  //@ts-ignore
+
     await fetchAndStoreBoxTariffs(knex, env.WB_API_TOKEN);
   });
 

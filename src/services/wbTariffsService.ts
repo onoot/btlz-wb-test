@@ -1,5 +1,7 @@
 import axios from 'axios';
-import { Knex } from 'knex';
+import type { Knex } from 'knex';
+//@ts-ignore
+
 import { logger } from '../utils/logger.js';
 
 const WB_TARIFFS_URL = 'https://common-api.wildberries.ru/api/v1/tariffs/box';
