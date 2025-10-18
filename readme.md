@@ -60,7 +60,8 @@ npm run dev
 
 Запуск проверки самого приложения:
 ```bash
-docker compose up -d --build app
+# docker compose up -d --build app
+docker compose up --build -d
 ```
 
 Для финальной проверки рекомендую:
